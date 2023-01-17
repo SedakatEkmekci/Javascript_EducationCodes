@@ -1,0 +1,18 @@
+//regex101.com
+
+-->Regex formatı slash ile başlar slash ile biter.
+/ seda /  
+
+--> ^seda$ sadece seda karakteri var ise eşleşir. başlangıcı ^ bitişi de  $ ile kontrol ederiz.
+sadece başını ya da sadece sonunu kontrol edebiliriz.
+
+--> karakter kontrolleri için ^[a-z]$ şeklinde kontrol ederiz. 
+
+--> Büyük harf kontrolü için ^[a-zA-Z]$ şeklinde kontrol edebiliriz.
+
+--> Birden fazla karakter kontrolü için ^[a-zA-Z]{5,10}$ 5 ile 10 karakter arasında eşleme yapar.
+
+--> Sayı kontrolü için :^[a-zA-Z0-9]{5,10}$
+
+-->Özel karakterler için: ^.{5,10}$ 
+

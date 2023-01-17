@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <title>Document</title>
+    <style>
+        /* p{
+            color: red;
+            margin: 4px;
+        }
+        b{
+            color: blue;
+        } */
+
+        p{
+            color: blue;
+            margin: 8px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <p></p>
+    
+    <select id="single">
+        <option>Single</option>
+        <option>Single2</option>
+    </select>
+
+    <select id="multiple" multiple="multiple">
+        <option selected="select">Multiple</option>
+        <option>Multiple2</option>
+        <option selected="selected">Multiple3</option>
+    </select> -->
+
+
+    <input type="text" value="some text">
+    <p></p>
+
+
+
+    <script>
+        // function displayVals(){
+        //     var singleValues = $("#single").val();
+        //     var multipleValues = $("#multiple").val();
+        //     $("p").html("<b>Single:</b>"+singleValues+"<b>Multiple:</b>"+multipleValues.join(", "));
+        // }
+        // $("select").change(displayVals);
+
+
+        $("input")
+                  .keyup(function(){
+                      var value = $(this).val();
+                      $("p").text(value);
+                  })
+                .keyup();
+    </script>
+
+
+</body>
+</html>

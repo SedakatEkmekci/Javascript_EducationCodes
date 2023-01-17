@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <style>
+        p {
+            margin: 8px;
+            font-size: 16px;
+        }
+        
+        .selected {
+            color: blue;
+        }
+        
+        .highlight {
+            background: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>Hello</p>
+    <p id="orta">and</p>
+    <p>Goodbye</p>
+
+    <script>
+        //$("p").last().addClass("selected"); //p etiketlerinden sonuncusuna selected classını veriyoruz
+        //$("p").first().addClass("selected"); //ilkine verdik.
+        $("#orta").addClass("selected highlight"); //id'si orta olana hem selected hem de highlight classını verdik.
+    </script>
+</body>
+
+</html>

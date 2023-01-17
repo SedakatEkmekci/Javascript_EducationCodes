@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <style></style>
+</head>
+
+<body>
+    <button>Change Title</button>
+    <input type="text" title="hello there">
+    <div id="log"></div>
+
+    <script>
+        (function() {
+            var inputTitle = $("input").attr("title"); //attribute'ları title olanları inputTitle'a atadık.
+            $("button").click(function() { //butona tıkaladığımızda
+                var input = $(this).next(); //input bir sonraki input olur.tekrar tekrar bastığımızda farklı değerler alır.
+
+                if (input.attr("title") === inputTitle) { //butona tıkladığımızda title'ımız input title'a eşitse
+                    input.removeAttr("title") //title değerini kaldırdık.
+                } else { ///butona yeniden tıkladığımızda inputTitle değerimiz undefined olur
+                    input.attr("title", inputTitle); //title değerine inputTitle değerini atadık.
+                }
+
+                $("#log").html("input title is now " + input.attr("title")); //ilk if'de valu değeri undefined olur.
+            });
+        })();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prop</title>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <style></style>
+
+</head>
+
+<body>
+    <button>Add and remove a property</button><br><br>
+    <div></div>
+
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                var $x = $("div"); //div etiketim için bir selection işlemi yaptık.
+                $x.prop("color", "FF0000"); //div etiketlerinin içerisine property ataması yaptık
+                $x.append("The color property has the following value: " + $x.prop("color")); //textin sonuna seçtiğimiz etiketin propertysini ekledi
+                $x.removeProp("color"); //seçtiğim div etiketinin color propertysini kaldırdık.
+                $x.append("<br> Now the color property has the following value: " + $x.prop("color") + "<br>"); //seçtiğim div etiketinin color propertysinin value değerini döndürecek
+            });
+        });
+    </script>
+</body>
+
+</html>
